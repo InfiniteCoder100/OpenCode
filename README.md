@@ -9,14 +9,12 @@ DataX | A bid/ask marketplace for curated datasets.
 
 DataX is a bid/ask marketplace concept for data similar to StockX where users can list data their unique and custom datasets for sale with the ability for public search and potential buyers to set their asking price. 
 
-Built using NextJS, Filecoin FVM, Tableland, Dataverse, Saturn, and web3.storage for the Encode Open Data hackathon 2023.
+Built using NextJS, Filecoin FVM, Tableland, Dataverse, Saturn, and web3.storage for the REBUILD OWNERSHIP 2.0: INTERNET PRIVACY Hackathon 2023.
 
 
-Live Demo: https://data-x.surge.sh (calibration)
+Live Demo: https://data-x-five.vercel.app/
 
-Demo video: https://youtu.be/QQEwZOEAQjI
-
-Pitch slides: https://docs.google.com/presentation/d/1h30Fic6S2ALmAOz_mFOzgp0uBYAjAMlzdhefXmbDgOo/edit#slide=id.g28a8e7e850a_0_140
+Demo video: https://youtu.be/HKO962wLtVQ
 
 Note that networks with faster block times will give better UX and settlement for table/backend mutations (ex: indexing listings for search, recording purchases/offers). Calibration has a 30s block time - this has been edited for the demo video.
 
@@ -70,20 +68,17 @@ Uploaded Datasets all have a validation flag on them. By default all datasets ar
 ## Technologies used
 
 
-Filecoin FVM: The Filecoin File Verification Marketplace (FVM) integration ensures the security and immutability of listed data. This technology guarantees that data remains tamper-proof and accessible only to authorized users. Filecoin smart contracts are used for access control and auditing of offers. Every DataX listing gets its own unique contract.
+1. Filecoin FVM: The Filecoin File Verification Marketplace (FVM) integration ensures the security and immutability of listed data. This technology guarantees that data remains tamper-proof and accessible only to authorized users. Filecoin smart contracts are used for access control and auditing of offers. Every DataX listing gets its own unique contract.
 
-Example contract here: https://calibration.filscan.io/address/0x6886489D4c3e3C89b70a56DC8e8984eccF520728/
+2. Tableland: Tableland is employed to manage the complex data relationships within the marketplace, enabling efficient search and discovery of relevant data sets. 
 
+3. web3.storage: To address the challenge of decentralized storage, we integrated web3.storage, which utilizes blockchain technology to securely store and retrieve data files.
 
-Tableland: Tableland is employed to manage the complex data relationships within the marketplace, enabling efficient search and discovery of relevant data sets. 
+4. Filecoin Saturn: Saturn secures each data set client side with .car files delivered to the purchaser that guarantee additional tamper and hack-proofing from the original upload time (i.e. the original dataset is verified to be the one delivered on purchase). Validation is done using a hosted browser client service worker.
 
-web3.storage: To address the challenge of decentralized storage, we integrated web3.storage, which utilizes blockchain technology to securely store and retrieve data files.
+5. DataverseOS: Authentication and user state management plugging into existing wallets and providers the customer may already use (i.e. metamask).
 
-Filecoin Saturn: Saturn secures each data set client side with .car files delivered to the purchaser that guarantee additional tamper and hack-proofing from the original upload time (i.e. the original dataset is verified to be the one delivered on purchase). Validation is done using a hosted browser client service worker.
-
-DataverseOS: Authentication and user state management plugging into existing wallets and providers the customer may already use (i.e. metamask).
-
-NextJS: We utilized NextJS to create a responsive and interactive frontend interface that offers a seamless browsing experience for users. Deployed on surge.
+6. NextJS: We utilized NextJS to create a responsive and interactive frontend interface that offers a seamless browsing experience for users. Deployed on surge.
 
 <!-- Filecoin (8): Compatiable with many of the existing EVM toolkits like ethers made it easy to get up and running. Actors/deals have some learning curve.
 Tableland (7): Bit harder to debug and somewhat subject to the block settlement times with tables. Some missing functionality with the react sdk but the discord was helpful
@@ -95,7 +90,7 @@ Dataverse (7): Some overlap with tableland functionality, but used this as a wra
 
 <!-- Saturn: Data validation (using browser client). https://github.com/filecoin-saturn/browser-client -->
 
- <p>Note this project is a hackathon prototype and would require additional work to be mainnet/production ready.</p>
+ 
 
 
 ## Running the project (from scratch)
@@ -146,6 +141,6 @@ This command deploys the build site to surge.sh by default, feel free to edit to
 
 
 ### Useful links
-* https://www.encode.club/open-data-hack
+* https://rebuild.dataverse.city/
 * https://ownershiplabs.notion.site/DataverseOS-Builders-Hackathon-2-0-377b2b3337454311ace6eb82a6ef5472
 * https://docs.tableland.xyz/sdk/database/
